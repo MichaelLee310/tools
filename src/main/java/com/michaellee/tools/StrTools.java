@@ -37,4 +37,19 @@ public class StrTools {
             return strResult;
         }
     }
+
+    /**
+     * 判断字符串是否为英文
+     * @param word
+     * @return
+     */
+    private boolean strIsEnglish(String word) {
+        for (int i = 0; i < word.length(); i++) {
+            if (!(word.charAt(i) >= 'A' && word.charAt(i) <= 'Z')
+                    && !(word.charAt(i) >= 'a' && word.charAt(i) <= 'z')) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
